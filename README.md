@@ -33,7 +33,7 @@
 
 ## Продвинутые опции  
 
-• Nunit 2 (FluentAssertions, GenFu)  
+• NUnit 2 (FluentAssertions, GenFu)  
 • SQL 2 (хранимые процедуры, триггеры, ограничения, Azure CosmosDB)  
 • NoSQL (Key-Value хранилища (Redis), JSON (MongoDB))  
 • Entity Framework 2 (кеш второго уровня, Lazy loading, Eager Loading, Explicit Loading, TPT, TPH)  
