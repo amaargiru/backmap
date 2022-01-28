@@ -12,7 +12,7 @@
 • C# 2 (await/async, 2/4 ядра/потока, асинхронные потоки и каналы, синхронизация потоков, IQueryable, кеширование, AutoMapper, HangFire)  
 • Паттерны 1 (выделение интерфейсов, SOLID (SRP, OCP, LSP, ISP, DIP), IoC/DI (Microsoft.Extensions.DependencyInjection, Autofac), Singleton, CQRS, Strategy, Observer)  
 • Логгирование 1 (Serilog (консоль, файл))  
-• Nunit 1 (моки, стабы, Moq)  
+• NUnit 1 (моки, стабы, Moq)  
 • Git flow 2 (ветвление, слияние, чистка веток)  
 
 ## Сеть  
