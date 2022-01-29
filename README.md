@@ -1,21 +1,118 @@
-# Backmap  
+# Backmap — памятка C# backend программиста
 
-## Начальные знания  
+## Оглавление
 
-• C# 1 (LINQ, события, обобщения, интефейсы, делегаты, исключения, Garbage collector, атрибуты)  
-• Структуры данных (массив, динамический массив, односвязный список, двусвязный список, хэш-таблица (решение проблем при нахождении хеша), бинарное дерево, Б-дерево, красно-черное дерево, АВЛ-дерево, префиксное дерево)  
-• SQL 1 (Create, Update, Delete, Select, Where, Insert, Drop, Show, Join)  
+### Начальные знания  
+
+• C# 1  
+    • LINQ  
+    • События  
+    • Обобщения  
+    • Интерфейсы  
+    • Делегаты  
+    • Исключения  
+    • Garbage collector  
+    • Атрибуты  
+• Структуры данных  
+    • Массив  
+    • Динамический массив  
+    • Односвязный список  
+    • Двусвязный список  
+    • Хэш-таблица  
+        • Решение проблем вычисления хеша  
+    • Бинарное дерево  
+    • Б-дерево  
+    • Красно-черное дерево  
+    • АВЛ-дерево  
+    • Префиксное дерево  
+• Алгоритмы 1  
+    • FizzBuzz  
+    • О-о-о! Большое!
+    • Сортировка  
+        • Пузырьковая (Bubble)  
+        • Быстрая (Quick)  
+        • Слиянием (Merge)  
+        • Пирамидальная (Heap)  
+        • Вставками (Insertion)  
+        • Timsort  
+        • Introsort  
+        • Поразрядная (Radix)  
+    • Поиск  
+        • Линейный поиск  
+        • Бинарный поиск  
+        • Поиск в глубину (DFS)  
+        • Поиск в ширину (BFS)  
+        • Алгоритм Дейкстры  
+        • Алгоритм Беллмана-Форда  
+    • Представление графов  
+        • Матрица смежности  
+        • Матрица инцидентности  
+        • Список смежности  
+        • Список инцидентности  
+    • Конечные автоматы  
+    • ДПФ/БПФ  
+• SQL 1  
+    • Зачем нужен SQL?
+    • Create  
+    • Update  
+    • Delete  
+    • Select  
+    • Where  
+    • Insert  
+    • Drop  
+    • Show  
+    • Join  
 • MS SQL 1  
-• Entity Framework 1 (Code First, миграция, Change tracker API)  
-• Алгоритмы 1 (FizzBuzz, сортировка(пузырьковая (Bubble), быстрая (Quick), слиянием (Merge), пирамидальная (Heap), вставками (Insertion), Timsort, Introsort, поразрядная (Radix)), поиск(линейный поиск, бинарный поиск, поиск в глубину (DFS), поиск в ширину (BFS), Дейкстра, Беллман-Форд), представление графов(матрица смежности, матрица инцидентности, список смежности, список инцидентности), конечные автоматы, ДПФ/БПФ)  
-• Профилирование 1 (BenchmarkDotNet (сравнение сортировок))  
-• C# 2 (await/async, 2/4 ядра/потока, асинхронные потоки и каналы, синхронизация потоков, IQueryable, кеширование, AutoMapper, HangFire)  
-• Паттерны 1 (выделение интерфейсов, SOLID (SRP, OCP, LSP, ISP, DIP), IoC/DI (Microsoft.Extensions.DependencyInjection, Autofac), Singleton, CQRS, Strategy, Observer)  
-• Логгирование 1 (Serilog (консоль, файл))  
-• NUnit 1 (моки, стабы, Moq)  
-• Git flow 2 (ветвление, слияние, чистка веток)  
+• Entity Framework 1  
+    • Code First  
+    • Миграция  
+    • Change tracker API  
+• Профилирование 1  
+    • BenchmarkDotNet  
+        • Сравнение двух вариантов FizzBuzz  
+        • Сравнение восьми вариантов сортировок  
+• C# 2  
+    • await/async  
+    • 2/4 ядра/потока  
+    • Асинхронные потоки и каналы  
+    • Синхронизация потоков  
+    • IQueryable  
+    • Кеширование  
+    • AutoMapper  
+    • HangFire  
+• Паттерны 1  
+    • Какой код лучше?  
+    • Выделение интерфейсов  
+    • IoC/DI  
+        • Microsoft.Extensions.DependencyInjection  
+        • Autofac  
+    • SOLID  
+        • SRP  
+        • OCP  
+        • LSP  
+        • ISP  
+        • DIP  
+    • Singleton  
+    • CQRS  
+    • Strategy  
+    • Observer  
+• Логгирование 1  
+    • Serilog  
+        • Вывод логов в консоль  
+        • Запись логов в файл  
+        • Анализ логов  
+• NUnit 1  
+    • Простые тесты  
+    • Моки  
+    • Стабы  
+    • Moq  
+• Git flow 2  
+    • Минимальный вариант  
+    • Ветвление  
+    • Слияние  
+    • Чистка веток  
 
-## Сеть  
+### Сеть  
 
 • HTTP/HTTPS  
 • HTML 1 (DOM)  
@@ -23,36 +120,105 @@
 • TypeScript 1  
 • React 1  
 • Отладка в браузере 1  
-• API (REST, gRPC)  
-• ASP.NET Core Web API 1 (конфигурирование, аутентификация)  
-• ASP.NET Core MVC 1 (фильтры, атрибуты, middleware)  
-• Razor 1 (Razor Pages, Razor Components)  
+• API  
+    • REST  
+    • gRPC  
+• ASP.NET Core Web API 1  
+    • Конфигурирование  
+    • Аутентификация  
+• ASP.NET Core MVC 1  
+    • Фильтры  
+    • Атрибуты  
+    • Middleware  
+• Razor 1  
+    • Razor Pages  
+    • Razor Components  
 • FluentValidation  
 • Polly  
 • Selenium  
 
-## Продвинутые опции  
+### Облака
 
-• NUnit 2 (FluentAssertions, GenFu)  
-• SQL 2 (хранимые процедуры, триггеры, ограничения, Azure CosmosDB)  
-• NoSQL (Key-Value хранилища (Redis), JSON (MongoDB))  
-• Entity Framework 2 (кеш второго уровня, Lazy loading, Eager Loading, Explicit Loading, TPT, TPH)  
-• Паттерны 2 (DI Life Cycles (Scoped, Transient, Singleton), Builder, Decorator, Facade, Factory, Mediator/MediatR)  
-• ASP.NET Core Web API 2 (Swagger)  
+• Azure  
+    • Azure CosmosDB  
+    • Azure Functions  
+
+### Продвинутые опции  
+
+• SQL 2  
+    • Хранимые процедуры  
+    • Триггеры  
+    • Ограничения  
+• NoSQL  
+    • Key-Value хранилища (Redis)  
+    • JSON (MongoDB)  
+• Entity Framework 2  
+    • кеш второго уровня  
+    • Lazy loading  
+    • Eager Loading  
+    • Explicit Loading  
+    • TPT  
+    • TPH  
+• Паттерны 2  
+    • DI Life Cycles  
+        • Scoped  
+        • Transient  
+        • Singleton  
+    • Builder  
+    • Decorator  
+    • Facade  
+    • Factory  
+    • Mediator/MediatR  
+• ASP.NET Core Web API 2  
+    • Swagger  
 • ASP.NET Core MVC 2  
 • Razor 2  
 • Blazor 1  
-• Профилирование 2 (dotTrace, dotTrace + SQL, dotTrace + HTTP, анализ IL-кода, Sharplab)  
-• Логгирование 2 (ELK Stack)  
-• Алгоритмы 2 (строки (алгоритм Ахо-Корасик), графы, алгоритм Джея Кадана (Jay Kadane), вычислительная геометрия, криптография, жадные алгоритмы, динамическое программирование, сжатие данных)  
+• Профилирование 2  
+    • dotTrace  
+    • dotTrace + SQL  
+    • dotTrace + HTTP  
+    • Анализ IL-кода  
+    • Sharplab  
+• Логгирование 2  
+    • ELK Stack  
+• Алгоритмы 2  
+    • строки  
+        • алгоритм Ахо-Корасик  
+    • графы  
+    • вычислительная геометрия  
+    • алгоритм Джея Кадана (Jay Kadane)  
+    • жадные алгоритмы  
+    • динамическое программирование  
+    • сжатие данных  
+    • криптография  
+• NUnit 2  
+    • FluentAssertions  
+    • GenFu  
+    • TDD? DDD?
 
-## Системный подход  
+### Системный подход  
 
-• Микросервисы (RabbitMQ, MassTramsit, Ocelot, Docker, Kubernetes)  
-• CD/CI (GitHub Actions)
+• CD/CI (GitHub Actions)  
 • Системный дизайн 1  
-• Английский язык 1 (грамматика, чтение, письмо, слушание, говорение B1)  
-• Проекты (2048, syncro, mikeslist, tuppum, tradercad)  
+• Микросервисная архитектура  
+    • RabbitMQ  
+    • MassTramsit  
+    • Ocelot  
+    • Docker  
+    • Kubernetes  
 • Системный дизайн 2  
-• Английский язык 2 (грамматика, чтение, письмо, слушание, говорение B2)  
-• Amazon STAR
+
+### Pet-проекты  
+• Игра 2048  
+• Syncro, программа резервного копирования  
+• Mikeslist, API сайта объявлений  
+• Tuppum, прототип блог-платформы  
+• Tradercad, сервис технического анализа
+
+### Soft skills  
+
+• Английский язык B1 (грамматика, чтение, письмо, слушание, говорение B1)  
+• Amazon STAR  
+• Английский язык B2 (грамматика, чтение, письмо, слушание, говорение B2)  
+
