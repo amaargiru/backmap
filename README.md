@@ -73,11 +73,14 @@
         • Сравнение двух вариантов FizzBuzz  
         • Сравнение восьми вариантов сортировок  
 • C# 2  
-    • await/async  
+    • Асинхронное программирование (docs.microsoft.com/ru-ru/dotnet/standard/async)  
+        • await/async  
+        • Асинхронные потоки и каналы (System.IO.Pipelines, System.Threading.Channels)  
+        • Синхронизация потоков  
+    • Параллельное программирование (docs.microsoft.com/ru-ru/dotnet/standard/parallel-programming/)  
+        • Структуры данных для параллельного программирования  
     • 2/4 ядра/потока  
     • FizzBuzz на стероидах  
-    • Асинхронные потоки и каналы  
-    • Синхронизация потоков  
     • IQueryable  
     • Кеширование  
     • AutoMapper  
@@ -94,7 +97,7 @@
         • LSP  
         • ISP  
         • DIP  
-• Паттерны проектирования 1
+• Паттерны проектирования 1  
     • Singleton  
     • CQRS  
     • Strategy  
@@ -167,7 +170,7 @@
         • Scoped  
         • Transient  
         • Singleton  
-• Паттерны проектирования 2
+• Паттерны проектирования 2  
     • Builder  
     • Decorator  
     • Facade  
@@ -214,10 +217,11 @@
     • Docker  
     • Kubernetes  
 • CD/CI  
-    • GitHub Actions  
+    • GitHub Actions (docs.microsoft.com/ru-ru/dotnet/devops/github-actions-overview)  
 • Системный дизайн 2  
 
 ### Pet-проекты  
+
 • Игра 2048  
 • Syncro, программа резервного копирования  
 • Mikeslist, API сайта объявлений  
@@ -245,6 +249,8 @@
 • SQL  
 • Тестирование  
 • Английский язык  
+
+## Содержание
 
 ### FizzBuzz  
 
@@ -306,3 +312,7 @@ for (var i = 1; i <= Max; i++)
 ```
 
 Больше подробностей про оптимизацию задачи FizzBuzz — «[FizzBuzz по-сениорски](https://habr.com/ru/post/540136/)».  
+
+[ECMA-334](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)  
+
+Документация на сайте Microsoft и опция «Загрузить pdf»  
