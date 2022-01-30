@@ -12,6 +12,7 @@
     • Делегаты  
     • Исключения  
     • Garbage collector  
+    • Nullable  
     • Атрибуты  
 • Структуры данных  
     • Массив  
@@ -74,13 +75,14 @@
 • C# 2  
     • await/async  
     • 2/4 ядра/потока  
+    • FizzBuzz на стероидах  
     • Асинхронные потоки и каналы  
     • Синхронизация потоков  
     • IQueryable  
     • Кеширование  
     • AutoMapper  
     • HangFire  
-• Паттерны 1  
+• Архитектурные паттерны 1  
     • Какой код лучше?  
     • Выделение интерфейсов  
     • IoC/DI  
@@ -92,6 +94,7 @@
         • LSP  
         • ISP  
         • DIP  
+• Паттерны проектирования 1
     • Singleton  
     • CQRS  
     • Strategy  
@@ -159,11 +162,12 @@
     • Explicit Loading  
     • TPT  
     • TPH  
-• Паттерны 2  
+• Архитектурные паттерны 2  
     • DI Life Cycles  
         • Scoped  
         • Transient  
         • Singleton  
+• Паттерны проектирования 2
     • Builder  
     • Decorator  
     • Facade  
@@ -230,3 +234,75 @@
 • Английский язык B1 (грамматика, чтение, письмо, слушание, говорение B1)  
 • IELTS  
 • TOEFL  
+
+### Что почитать  
+
+• C#  
+• Алгоритмы и структуры данных  
+• Паттерны проектирования  
+• Архитектурные паттерны  
+• Сеть  
+• SQL  
+• Тестирование  
+• Английский язык  
+
+### FizzBuzz  
+
+Почему нужно просить выполнить столь простое задание — «[FizzBuzz, или почему программисты не умеют программировать](https://habr.com/ru/post/298134/)».  
+
+Напишите программу, которая выводит на экран числа от 1 до 100. При этом вместо чисел, кратных трем, программа должна выводить слово «Fizz», а вместо чисел, кратных пяти — слово «Buzz». Если число кратно и 3, и 5, то программа должна выводить слово «FizzBuzz».  
+
+Самый простой вариант:  
+```cs
+const int Max = 100;
+
+for (var i = 1; i <= Max; i++)
+{
+   if ((i % 3 == 0) && (i % 5 == 0))
+   {
+      Console.WriteLine("FizzBuzz");
+   }
+   else if (i % 3 == 0)
+   {
+      Console.WriteLine("Fizz");
+   }
+   else if (i % 5 == 0)
+   {
+      Console.WriteLine("Buzz");
+   }
+   else
+   {
+      Console.WriteLine(i);
+   }
+}
+```
+
+или чуточку улучшенный вариант:  
+```cs
+const int Max = 100;
+
+for (var i = 1; i <= Max; i++)
+{
+   if (i % 3 == 0)
+   {
+      if (i % 5 == 0)
+      {
+         Console.WriteLine("FizzBuzz");
+      }
+      else
+      {
+         Console.WriteLine("Fizz");
+      }
+   }
+   else if (i % 5 == 0)
+   {
+      Console.WriteLine("Buzz");
+   }
+   else
+   {
+      Console.WriteLine(i);
+   }
+}
+```
+
+Больше подробностей про оптимизацию задачи FizzBuzz — «[FizzBuzz по-сениорски](https://habr.com/ru/post/540136/)».  
