@@ -5,87 +5,87 @@
 ### Начальные знания  
 
 • C# 1  
-    • LINQ  
-    • События  
-    • Обобщения  
-    • Интерфейсы  
-    • Делегаты  
-    • Исключения  
-    • Garbage collector  
-    • Nullable  
-    • Атрибуты  
+    • [LINQ](#basecsharplinq)  
+    • [События](#basecsharpevents)  
+    • [Обобщения](#basecsharpgenerics)  
+    • [Интерфейсы](#basecsharpinterfaces)  
+    • [Делегаты](#basecsharpdelegates)  
+    • [Исключения](#basecsharpexceptions)  
+    • [Garbage collector](#basecsharpgc)  
+    • [Nullable](#basecsharpnullable)  
+    • [Атрибуты](#basecsharpattributes)  
 • Структуры данных  
-    • Массив  
-    • О-о-о! Большое!  
-    • Динамический массив  
-    • Односвязный список  
-    • Двусвязный список  
-    • Хэш-таблица  
-        • Решение проблем вычисления хеша  
-    • Бинарное дерево  
-    • Б-дерево  
-    • Красно-черное дерево  
-    • АВЛ-дерево  
-    • Префиксное дерево  
-    • Выбор структуры данных  
+    • [Массив](#basearray)  
+    • [О-о-о! Большое!](#basebigo)  
+    • [Динамический массив](#basedarray)  
+    • [Односвязный список](#baseslist)  
+    • [Двусвязный список](#basedlist)  
+    • [Хэш-таблица](#basehashtable)  
+        • [Решение проблем вычисления хеша](#basehashtableproblem)  
+    • [Бинарное дерево](#basebitree)  
+    • [Б-дерево](#basebtree)  
+    • [Красно-черное дерево](#baserbtree)  
+    • [АВЛ-дерево](#baseavltree)  
+    • [Префиксное дерево](#basetrie)  
+    • [Выбор структуры данных](#basestructselection)  
 • Алгоритмы 1  
     • [FizzBuzz](#simplefizzbuzz)  
     • Сортировка  
-        • [Пузырьковая (Bubble)](#bubblesorting)  
-        • Быстрая (Quick)  
-        • Слиянием (Merge)  
-        • Пирамидальная (Heap)  
-        • Вставками (Insertion)  
-        • Timsort  
-        • Introsort  
-        • Поразрядная (Radix)  
+        • [Пузырьковая (Bubble)](#basebubblesort)  
+        • [Быстрая (Quick)](#basequicksort)  
+        • [Слиянием (Merge)](#basemergesort)  
+        • [Пирамидальная (Heap)](#baseheapsort)  
+        • [Вставками (Insertion)](#baseinsertionsort)  
+        • [Timsort](#basetimsort)  
+        • [Introsort](#baseintrosort)  
+        • [Поразрядная (Radix)](#baseradixsort)  
     • Поиск  
-        • Линейный поиск  
-        • Бинарный поиск  
-        • Поиск в глубину (DFS)  
-        • Поиск в ширину (BFS)  
-        • Алгоритм Дейкстры  
-        • Алгоритм Беллмана-Форда  
+        • [Линейный поиск](#baselinearsearch)  
+        • [Бинарный поиск](#basebinarysearch)  
+        • [Поиск в глубину (DFS)](#basedfs)  
+        • [Поиск в ширину (BFS)](#basebfs)  
+        • [Алгоритм Дейкстры](#basedijkstras)  
+        • [Алгоритм Беллмана-Форда](#basebellmanford)  
     • Представление графов  
-        • Матрица смежности  
-        • Матрица инцидентности  
-        • Список смежности  
-        • Список инцидентности  
-    • Конечные автоматы  
-    • ДПФ/БПФ  
+        • [Матрица смежности](#basegraphadjacencymatrix)  
+        • [Матрица инцидентности](#basegraphincidencematrix)  
+        • [Список смежности](#basegraphadjacencylist)  
+        • [Список инцидентности](#basegraphincidencelist)  
+    • [Конечные автоматы](#basefinitestatemachine)  
+    • [ДПФ/БПФ](#basefastfouriertransform)  
 • SQL 1  
-    • Зачем нужен SQL?  
-    • Create  
-    • Update  
-    • Delete  
-    • Select  
-    • Where  
-    • Insert  
-    • Drop  
-    • Show  
-    • Join  
-• MS SQL 1  
+    • [Зачем нужен SQL?](#whysql)  
+    • [Create](#sqlbasecreate)  
+    • [Update](#sqlbaseupdate)  
+    • [Delete](#sqlbasedelete)  
+    • [Select](#sqlbaseselect)  
+    • [Where](#sqlbasewhere)  
+    • [Insert](#sqlbaseinsert)  
+    • [Drop](#sqlbasedrop)  
+    • [Show](#sqlbaseshow)  
+    • [Join](#sqlbasejoin)  
+• [MS SQL 1](#basemssql)  
 • Entity Framework 1  
-    • Code First  
-    • Миграция  
-    • Change tracker API  
+    • [Code First](#efbasecodefirst)  
+    • [Миграция](#efbasemigration)  
+    • [Change tracker API](#efbasectapi)  
 • Профилирование 1  
-    • BenchmarkDotNet  
-        • Сравнение двух вариантов FizzBuzz  
-        • Сравнение восьми вариантов сортировок  
+    • [BenchmarkDotNet](#profilingbasebenchmarkdotnet)  
+        • [Сравнение двух вариантов FizzBuzz](#profilingbasefizzbuzzcompare)  
+        • [Сравнение восьми вариантов сортировок](#profilingbasesortingcompare)  
 • C# 2  
     • Асинхронное программирование (docs.microsoft.com/ru-ru/dotnet/standard/async)  
-        • await/async  
-        • Асинхронные потоки и каналы (System.IO.Pipelines, System.Threading.Channels)  
-        • Синхронизация потоков  
+        • [await/async](#csharpawaitasync)  
+        • [Асинхронные потоки и каналы (System.IO.Pipelines, System.Threading.Channels)](#csharppipelinesandchannels)  
+        • [Синхронизация потоков](#csharpsyncchannels)  
     • Параллельное программирование (docs.microsoft.com/ru-ru/dotnet/standard/parallel-programming/)  
-        • Структуры данных для параллельного программирования  
-    • 2/4 ядра/потока  
-    • FizzBuzz на стероидах  
-    • IQueryable  
-    • Кеширование  
-    • AutoMapper  
-    • HangFire  
+        • [Структуры данных для параллельного программирования](#csharpdatastructuresforparallelprogramming)  
+    • [2/4 ядра/потока](#csharp24threads)  
+    • [Параллельная версия FizzBuzz](#csharpparallelfizzbuzz)  
+    • [IQueryable](#csharpiqueryable)  
+    • [Кеширование](#csharpcashing)  
+    • [AutoMapper](#csharpautomapper)  
+    • [HangFire](#csharphangfire)  
 • Архитектурные паттерны 1  
     • Какой код лучше?  
     • Выделение интерфейсов  
@@ -93,11 +93,11 @@
         • Microsoft.Extensions.DependencyInjection  
         • Autofac  
     • SOLID  
-        • SRP  
-        • OCP  
-        • LSP  
-        • ISP  
-        • DIP  
+        • [SRP](#archsolidsrp)  
+        • [OCP](#archsolidocp)  
+        • [LSP](#archsolidlsp)  
+        • [ISP](#archsolidisp)  
+        • [DIP](#archsoliddip)  
 • Паттерны проектирования 1  
     • Singleton  
     • CQRS  
@@ -339,9 +339,9 @@ for (var i = 1; i <= Max; i++)
 }
 ```
 
-### Пузырьковая сортировка <a name="bubblesorting"></a>
-
 Больше подробностей про оптимизацию задачи FizzBuzz — «[FizzBuzz по-сениорски](https://habr.com/ru/post/540136/)».  
+
+### Пузырьковая сортировка <a name="bubblesort"></a>
 
 [ECMA-334](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)  
 
