@@ -2,9 +2,13 @@
 
 ## Оглавление
 
+• Зачем нужны шпаргалки?
+
 ### Начальные знания  
 
 • C# 1  
+    • [Базовые знания](#basecsharpbasic)  
+    • [Классы](#basecsharpclasses)  
     • [LINQ](#basecsharplinq)  
     • [События](#basecsharpevents)  
     • [Обобщения](#basecsharpgenerics)  
@@ -22,7 +26,7 @@
     • [Двусвязный список](#basedlist)  
     • [Хэш-таблица](#basehashtable)  
         • [Решение проблем вычисления хеша](#basehashtableproblem)  
-    • [Бинарное дерево](#basebitree)  
+    • [Бинарное дерево](#basebinarytree)  
     • [Б-дерево](#basebtree)  
     • [Красно-черное дерево](#baserbtree)  
     • [АВЛ-дерево](#baseavltree)  
@@ -87,11 +91,11 @@
     • [AutoMapper](#csharpautomapper)  
     • [HangFire](#csharphangfire)  
 • Архитектурные паттерны 1  
-    • Какой код лучше?  
-    • Выделение интерфейсов  
-    • IoC/DI  
-        • Microsoft.Extensions.DependencyInjection  
-        • Autofac  
+    • [Какой код лучше?](#archwhatbest)  
+    • [Выделение интерфейсов](#archinterfaces)  
+    • [IoC/DI](#archiocdi)  
+        • [Microsoft.Extensions.DependencyInjection](#archmicrosoftextensionsdependencyInjection)  
+        • [Autofac](#archautofac)  
     • SOLID  
         • [SRP](#archsolidsrp)  
         • [OCP](#archsolidocp)  
@@ -99,184 +103,194 @@
         • [ISP](#archsolidisp)  
         • [DIP](#archsoliddip)  
 • Паттерны проектирования 1  
-    • Singleton  
-    • CQRS  
-    • Strategy  
-    • Observer  
+    • [Singleton](#designpatternssingleton)  
+    • [CQRS](#designpatterncqrs)  
+    • [Strategy](#designpatternstrategy)  
+    • [Observer](#designpatternobserver)  
 • Логгирование 1  
-    • Serilog  
-        • Вывод логов в консоль  
-        • Запись логов в файл  
-        • Анализ логов  
+    • [Serilog](#loggingserilog)  
+        • [Вывод логов в консоль](#loggingconsole)  
+        • [Запись логов в файл](#loggingfile)  
+        • [Анализ логов](#logginganalize)  
 • NUnit 1  
-    • Простые тесты  
-    • Моки  
-    • Стабы  
-    • Moq  
+    • [Простые тесты](#nunitsimpletests)  
+    • [Архитектура, пригодная для тестирования](#nunittestarch)  
+    • [Моки](#nunitmocks)  
+    • [Стабы](#nunitstubs)  
+    • [Moq](#nunitmoq)  
 • Git flow 2  
-    • Минимальный вариант  
-    • Ветвление  
-    • Слияние  
-    • Чистка веток  
+    • [Минимальный вариант](#gitflowminimum)  
+    • [Ветвление](#gitflowfork)  
+    • [Слияние](#gitflowmerge)  
+    • [Чистка веток](#gitflowcleanup)  
 
 ### Сеть  
 
-• HTTP/HTTPS  
-• HTML 1 (DOM)  
-• CSS 1  
-• TypeScript 1  
-• React 1  
-• Отладка в браузере 1  
-• ASP.NET Core MVC 1  
-    • Фильтры  
-    • Атрибуты  
-    • Middleware  
-    • Взаимодействие ASP.NET Core MVC и React  
-• API  
-    • REST  
-    • gRPC  
-• ASP.NET Core Web API 1  
-    • Конфигурирование  
-    • Аутентификация  
-    • Проблемы синхронной аутентификации сервер/клиент  
-• Razor 1  
-    • Razor Pages  
-    • Razor Components  
-• FluentValidation  
-• Polly  
-• Selenium  
+• [Протокол HTTP/HTTPS](#nethttphttps)  
+• [HTML 1](#nethtmlbase)  
+    • [DOM 1](#netdombase)  
+• [CSS 1](#netcssbase)  
+• [TypeScript 1](#nettypescript)  
+• [React 1](#netreact)  
+• [Отладка в браузере 1](#netbrowserdebug)  
+• [ASP.NET Core MVC 1](#netaspnetcoremvc)  
+    • [Подключение к БД](#netaspnetcoredatabase)
+    • [Фильтры](#netaspnetcorefilters)  
+    • [Атрибуты](#netaspnetcoreattributes)  
+    • [Middleware](#netaspnetcoremiddleware)  
+    • [Взаимодействие ASP.NET Core MVC и React](#netaspnetcorewithreact)  
+• [API 1](#netapibase)  
+    • [REST 1](#netrestbase)  
+    • [gRPC 1](#netgrpcbase)  
+• [ASP.NET Core Web API 1](#netaspnetcorewebapi)  
+    • [Minimal API](#netaspnetcorewebapiminimalapi)  
+    • [Конфигурирование](#netaspnetcorewebapiconfig)  
+    • [Аутентификация](#netaspnetcorewebapiauth)    
+    • [Проблемы синхронной аутентификации сервер/клиент](#netaspnetcorewebapiauthsync)  
+• [Razor 1](#netrazorbase)  
+    • [Razor Pages](#netrazorpagesbase)  
+    • [Razor Components](#netrazorcomponentsbase)  
+• [FluentValidation](#netfluentvalidation)  
+• [Polly](#netpolly)  
+• [Selenium](#netselenium)  
 
 ### Облака
 
 • Azure  
-    • Azure CosmosDB  
-    • Azure Functions  
+    • [Azure CosmosDB](#azurecosmosdb)  
+    • [Azure Functions](#azurefunctions)  
 
 ### Продвинутые опции  
 
 • SQL 2  
-    • Хранимые процедуры  
-    • Триггеры  
-    • Ограничения  
-• NoSQL  
-    • Key-Value хранилища (Redis)  
-    • JSON (MongoDB)  
+    • [Хранимые процедуры](#advancedsqlstoredprocedures)  
+    • [Триггеры](#advancedsqltriggers)  
+    • [Ограничения](#advancedsqlconstraints)  
+• [NoSQL](#advancednosql)  
+    • [Key-Value хранилища (Redis)](#advancednosqlkvsredis)  
+    • [JSON (MongoDB)](#advancednosqljsonmongodb)  
 • Entity Framework 2  
-    • кеш второго уровня  
-    • Lazy loading  
-    • Eager Loading  
-    • Explicit Loading  
-    • TPT  
-    • TPH  
+    • [кеш второго уровня](#advancedefsecondlevelcash)  
+    • [Lazy loading](#advancedeflazyloading)  
+    • [Eager loading](#advancedefeagerloading)  
+    • [Explicit loading](#advancedefexplicitloading)  
+    • [TPT](#advancedeftpt)  
+    • [TPH](#advancedeftph)  
 • Архитектурные паттерны 2  
-    • DI Life Cycles  
-        • Scoped  
-        • Transient  
-        • Singleton  
+    • [DI Life Cycles](#advancedarchpatternsdilifecycles)  
+        • [Scoped](#advancedarchpatternsdilifecyclesscoped)  
+        • [Transient](#advancedarchpatternsdilifecyclestransient)  
+        • [Singleton](#advancedarchpatternsdilifecyclessingleton)  
 • Паттерны проектирования 2  
-    • Builder  
-    • Decorator  
-    • Facade  
-    • Factory  
-    • Mediator/MediatR  
-• ASP.NET Core Web API 2  
-    • Swagger  
+    • [Builder](#advanceddesignpatternsbuilder)  
+    • [Decorator](#advanceddesignpatternsdecorator)  
+    • [Facade](#advanceddesignpatternsfacade)  
+    • [Factory](#advanceddesignpatternsfactory)  
+    • [Mediator/MediatR](#advanceddesignpatternsmediator)  
 • ASP.NET Core MVC 2  
-• Razor 2  
-• Blazor 1  
+    • [Quartz.NET](#advancedaspnetcoremvcquartznet)  
+• ASP.NET Core Web API 2  
+    • [Swagger](#advancedwebapiswagger)  
+• [Razor 2](#advancedrazor)  
+• [Blazor 1](#advancedblazorbasic)  
 • Профилирование 2  
-    • dotTrace  
-    • dotTrace + SQL  
-    • dotTrace + HTTP  
-    • Анализ IL-кода  
-    • Sharplab  
+    • [dotTrace](#advancedprofilingjustdottrace)  
+    • [dotTrace + SQL](#advancedprofilingdottracesql)  
+    • [dotTrace + HTTP](#advancedprofilingdottracehttp)  
+    • [Анализ IL-кода](#advancedprofilingilcodeanalysis)  
+    • [Sharplab](#advancedprofilingsharplab)  
 • Логгирование 2  
-    • ELK Stack  
-        • Elasticsearch  
-            • OpenSearch  
-        • Logstash  
-        • Kibana  
+    • [ELK Stack](#advancedloggingelkstack)  
+        • [Elasticsearch](#advancedloggingelasticsearch)  
+            • [OpenSearch](#advancedloggingopensearch)  
+        • [Logstash](#advancedlogginglogstash)  
+        • [Kibana](#advancedloggingkibana)  
 • Алгоритмы 2  
     • Операции со строками  
-        • Алгоритм Ахо-Корасик  
-        • Алгоритм Рабина-Карпа  
-    • P vs NP  
+        • [Алгоритм Ахо-Корасик](#advancedalgorithmsahocorasickalgorithm)  
+        • [Алгоритм Рабина-Карпа](#advancedalgorithmsrabinkarpalgorithm)  
+    • [P vs NP](#advancedalgorithmspvsnp)  
     • Операции с графами  
-        • Минимальное остовное дерево  
-        • Алгоритм Флойда-Уоршолла  
-        • Максимальные потоки  
+        • [Минимальное остовное дерево](#advancedalgorithmsminimumspanningtree)  
+            • [Алгоритм Прима](#advancedalgorithmsprimalgorithm)  
+            • [Алгоритм Краскала](#advancedalgorithmskruskalalgorithm)  
+        • [Алгоритм Флойда-Уоршолла](#advancedalgorithmsfloydwarshallalgorithm)  
+        • [Максимальный поток en.wikipedia.org/wiki/Maximum_flow_problem#Algorithms](#advancedalgorithmsmaximumflowproblem)  
+            • [Алгоритм Эдмондса — Карпа](#advancedalgorithmsedmondskarpalgorithm)  
     • Вычислительная геометрия  
-        • Пара ближайших точек  
-        • Построение выпуклой оболочки  
-    • Алгоритм Джея Кадана (Jay Kadane)  
-    • Фильтр Калмана  
-    • Жадные алгоритмы  
-    • Динамическое программирование  
+        • [Пара ближайших точек](#advancedalgorithmsclosestpairofpoints)  
+            • [Рекурсивное решение](#advancedalgorithmslineartimerandomizedalgorithm)  
+        • [Построение выпуклой оболочки](#advancedalgorithmsconvexhull)  
+            • [Обход Грэхэма](#advancedalgorithmsgrahamscan)
+    • [Поиск подмассива с максимальной суммой](#advancedalgorithmsmaximumsubarray)
+        • [Алгоритм Кадана (Jay Kadane)](#advancedalgorithmskadanealgorithm)  
+    • [Фильтр Калмана](#advancedalgorithmskalmanfilter)  
+    • [Жадные алгоритмы](#advancedalgorithmsgreedyalgorithms)  
+    • [Динамическое программирование](#advancedalgorithmsdynamicprogramming)  
     • Сжатие данных без потерь  
         • Словарные методы  
-            • RLE  
-            • LZ77  
+            • [RLE](#advancedalgorithmsrle)  
+            • [LZ77](#advancedalgorithmslz77)  
         • Энтропийное сжатие  
-            • Алгоритм Хаффмана  
-            • Арифметическое кодирование  
-        • Large Text Compression Benchmark  
+            • [Алгоритм Хаффмана](#advancedalgorithmshuffmancoding)  
+            • [Арифметическое кодирование](#advancedalgorithms)  
+        • [Large Text Compression Benchmark](#advancedalgorithms)  
     • Криптография  
-        • RSA  
-        • ECDSA  
-    • Задача коммивояжера  
-        • NP-полнота  
-        • Полный перебор  
-        • Алгоритм имитации отжига  
-    • Синтез и оценка алгоритмов  
-    • LeetCode  
+        • [RSA](#advancedalgorithms)  
+        • [ECDSA](#advancedalgorithms)  
+    • [Задача коммивояжера](#advancedalgorithms)  
+        • [NP-полнота](#advancedalgorithms)  
+        • [Полный перебор](#advancedalgorithms)  
+        • [Алгоритм имитации отжига](#advancedalgorithms)  
+    • [Синтез и оценка алгоритмов](#advancedalgorithms)  
+    • [LeetCode](#advancedalgorithms)  
 • NUnit 2  
-    • FluentAssertions  
-    • GenFu  
-    • TDD? DDD?
+    • [FluentAssertions](#advancednunitfluentassertions)  
+    • [GenFu](#advancednunitgenfu)  
+    • [TDD? DDD?](#advancednunittddddd)  
 
 ### Системный подход  
 
-• Системный дизайн 1  
+• [Системный дизайн 1](#systemdesignbase)  
 • Микросервисная архитектура  
-    • RabbitMQ  
-    • MassTramsit  
-    • Ocelot  
-    • Docker  
-    • Kubernetes  
-• CD/CI  
-    • GitHub Actions (docs.microsoft.com/ru-ru/dotnet/devops/github-actions-overview)  
-• Системный дизайн 2  
+    • [RabbitMQ](#microservicesrabbitmq)  
+    • [MassTramsit](#microservicesmasstransmit)  
+    • [Ocelot](#microservicesocelot)  
+    • [Docker](#microservicesdocker)  
+    • [Kubernetes](#microserviceskubernetes)  
+• [CD/CI](#cdcibase)  
+    • [GitHub Actions (docs.microsoft.com/ru-ru/dotnet/devops/github-actions-overview)](#githubactionsbase)  
+• [Системный дизайн 2](#systemdesignadvanced)  
 
 ### Pet-проекты  
 
-• Игра 2048  
-• Syncro, программа резервного копирования  
-• Mikeslist, API сайта объявлений  
-• Tuppum, прототип блог-платформы  
-• Tradercad, сервис технического анализа
+• [Игра 2048](#petprojects2048)  
+• [Syncro, программа резервного копирования](#petprojectssyncro)  
+• [Mikeslist, API сайта объявлений](#petprojectsmikeslist)  
+• [Tuppum, прототип блог-платформы](#petprojectstuppum)  
+• [Tradercad, сервис технического анализа](#petprojectstradercad)
 
 ### Soft skills  
 
-• Английский язык A2 (грамматика, чтение, письмо, слушание, говорение A2)  
-• Amazon: Leadership Principles (amazon.jobs/en/principles)  
-• Facebook: Core Values (facebook.com/careers/facebook-life/)  
-• Google: Ten Things We Know to Be True (about.google/philosophy/)  
-• Методика STAR  
-• Английский язык B1 (грамматика, чтение, письмо, слушание, говорение B1)  
-• IELTS  
-• TOEFL  
+• [Английский язык A2 (грамматика, чтение, письмо, слушание, говорение A2)](#softskillsenglisha2)  
+• [Amazon: Leadership Principles (amazon.jobs/en/principles)](#softskillsamazonlp)  
+• [Facebook: Core Values (facebook.com/careers/facebook-life/)](#softskillsfacebookcv)  
+• [Google: Ten Things We Know to Be True (about.google/philosophy/)](#softskillsgoogletenthings)  
+• [Методика STAR](#softskillsstarmethod)  
+• [Английский язык B1 (грамматика, чтение, письмо, слушание, говорение B1)](#softskillsenglishb1)  
+• [Экзамены IELTS, TOEFL](#softskillsenglishexams)  
 
 ### Что почитать  
 
-• C#  
-• Алгоритмы и структуры данных  
-• Архитектурные паттерны  
-• Паттерны проектирования  
-• Сеть  
-• SQL  
-• Системный дизайн  
-• Тестирование  
-• Английский язык  
+• [C#](#bibliographycsharp)  
+• [Алгоритмы и структуры данных](#bibliographyalgorithmsanddatastructures)  
+• [Архитектурные паттерны](#bibliographyarchpatters)  
+• [Паттерны проектирования](#bibliographydesignpatters)  
+• [Сеть](#bibliographynet)  
+• [SQL](#bibliographysql)  
+• [Системный дизайн](#bibliographysystemdesign)  
+• [Тестирование](#bibliographytests)  
+• [Английский язык](#bibliographyenglish)  
 
 ## Содержание
 
