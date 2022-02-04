@@ -126,6 +126,11 @@
         • [WinMerge](#gitflowwinmerge)  
     • [Чистка веток](#gitflowcleanup)  
 
+### Pet-проекты, часть 1
+
+• [Игра 2048](#petprojects2048)  
+• [Syncro, программа резервного копирования](#petprojectssyncro)  
+
 ### Сеть  
 
 • [Протокол HTTP/HTTPS](#nethttphttps)  
@@ -248,7 +253,7 @@
     • [LeetCode](#advancedalgorithmsleetcode)  
 • NUnit 2  
     • [FluentAssertions](#advancednunitfluentassertions)  
-    • [GenFu](#advancednunitgenfu)  
+    • [Bogus](#advancednunitbogus)  
     • [TDD? DDD?](#advancednunittddddd)  
 
 ### Системный подход  
@@ -264,10 +269,8 @@
     • [GitHub Actions (docs.microsoft.com/ru-ru/dotnet/devops/github-actions-overview)](#githubactionsbasic)  
 • [Системный дизайн 2](#systemdesignadvanced)  
 
-### Pet-проекты  
+### Pet-проекты, часть 2
 
-• [Игра 2048](#petprojects2048)  
-• [Syncro, программа резервного копирования](#petprojectssyncro)  
 • [Mikeslist, API сайта объявлений](#petprojectsmikeslist)  
 • [Tuppum, прототип блог-платформы](#petprojectstuppum)  
 • [Tradercad, сервис технического анализа](#petprojectstradercad)
