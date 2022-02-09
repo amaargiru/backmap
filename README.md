@@ -297,7 +297,7 @@
 • [Тестирование](#bibliographytests)  
 • [Английский язык](#bibliographyenglish)  
 
-## Содержание
+## Содержание  
 
 ### FizzBuzz <a name="simplefizzbuzz"></a>  
 
@@ -361,6 +361,32 @@ for (var i = 1; i <= Max; i++)
 Больше подробностей про оптимизацию задачи FizzBuzz — «[FizzBuzz по-сениорски](https://habr.com/ru/post/540136/)».  
 
 ### Пузырьковая сортировка <a name="bubblesort"></a>
+
+```cs
+int[] arr = { 11, 120, 12, 130, 0, -1000, int.MaxValue, 0, 1_000_000_000, 0xFF, int.MinValue, 0, 100 };
+
+int len = arr.Length;
+
+for (int i = 0; i < len - 1; i++)
+{
+   for (int j = 0; j < len - i - 1; j++)
+   {
+      if (arr[j] > arr[j + 1])
+      {
+         (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
+      }
+   }
+}
+
+Array.ForEach(arr, Console.WriteLine);
+
+Console.ReadKey();
+```
+
+### P vs NP <a name="advancedalgorithmspvsnp"></a>
+
+Задачи класса P — реально вычислимые задачи (тезис Кобэма), решаются за полиномиальное время.  
+NP-полные задачи —  не разрешимы за полиномиальное время, но могут быть сведены к задачам разрешимости (да/нет), которые, в свою очередь, решаются за полиномиальное время.  
 
 [ECMA-334](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)  
 

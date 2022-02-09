@@ -1,22 +1,18 @@
-﻿using System.Runtime.CompilerServices;
+﻿int[] arr = { 11, 120, 12, 130, 0, -1000, int.MaxValue, 0, 1_000_000_000, 0xFF, int.MinValue, 0, 100 };
 
-int[] a = { 800, 11, 50, 771, 649, 770, 240, 9 };
+int len = arr.Length;
 
-for (int i = 1; i <= a.Length - 1; ++i)
+for (int i = 0; i < len - 1; i++)
 {
-   for (int j = 0; j < a.Length - i; ++j)
+   for (int j = 0; j < len - i - 1; j++)
    {
-      if (a[j] > a[j + 1])
+      if (arr[j] > arr[j + 1])
       {
-         Swap(ref a[j], ref a[j + 1]);
+         (arr[j], arr[j + 1]) = (arr[j + 1], arr[j]);
       }
    }
 }
 
-[MethodImpl(MethodImplOptions.AggressiveInlining)]
-static void Swap(ref int x, ref int y)
-{
-   var temp = x;
-   x = y;
-   y = temp;
-}
+Array.ForEach(arr, Console.WriteLine);
+
+Console.ReadKey();
