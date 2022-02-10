@@ -55,7 +55,6 @@
         • [Матрица инцидентности](#basicgraphincidencematrix)  
         • [Список смежности](#basicgraphadjacencylist)  
         • [Список инцидентности](#basicgraphincidencelist)  
-    • [Конечные автоматы](#basicfinitestatemachine)  
     • [ДПФ/БПФ](#basicfastfouriertransform)  
 • SQL 1  
     • [Зачем нужен SQL?](#whysql)  
@@ -90,6 +89,7 @@
     • [Кеширование](#csharpcashing)  
     • [AutoMapper](#csharpautomapper)  
     • [HangFire](#csharphangfire)  
+    • [Stateless](#csharpstateless) 
 • Архитектурные паттерны 1  
     • [Какой код лучше?](#archwhatbest)  
     • [Выделение интерфейсов](#archinterfaces)  
