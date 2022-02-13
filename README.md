@@ -96,7 +96,7 @@
     • [IoC/DI](#archiocdi)  
         • [Microsoft.Extensions.DependencyInjection](#archmicrosoftextensionsdependencyInjection)  
         • [Autofac](#archautofac)  
-    • SOLID  
+    • [SOLID](#arcchsolid)  
         • [SRP](#archsolidsrp)  
         • [OCP](#archsolidocp)  
         • [LSP](#archsolidlsp)  
@@ -383,10 +383,30 @@ Array.ForEach(arr, Console.WriteLine);
 Console.ReadKey();
 ```
 
+### SOLID <a name="arcchsolid"></a>
+
+Использование принципов SOLID помогает создавать расширяемые и поддерживаемые системы. Принципы SOLID также можно использовать в качестве ориентиров в процессе рефакторинга кода.
+
+### SRP <a name="archsolidsrp"></a>
+
+Single-responsibility principle, принцип единственной ответственности. 
+
+### OCP <a name="archsolidocp"></a>
+
+Open–closed principle, принцип открытости/закрытости
+
+### LSP <a name="archsolidlsp"></a>
+### ISP <a name="archsolidisp"></a>
+### DIP <a name="archsoliddip"></a>
+
 ### P vs NP <a name="advancedalgorithmspvsnp"></a>
 
 Задачи класса P — реально вычислимые задачи (тезис Кобэма), решаются за полиномиальное время.  
 NP-полные задачи —  не разрешимы за полиномиальное время, но могут быть сведены к задачам разрешимости (да/нет), которые, в свою очередь, решаются за полиномиальное время.  
+
+### Что почитать  
+
+### C# <a name="bibliographycsharp"></a>
 
 [ECMA-334](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)  
 
