@@ -89,7 +89,7 @@
     • [Кеширование](#csharpcashing)  
     • [AutoMapper](#csharpautomapper)  
     • [HangFire](#csharphangfire)  
-    • [Stateless](#csharpstateless) 
+    • [Stateless](#csharpstateless)  
 • Архитектурные паттерны 1  
     • [Какой код лучше?](#archwhatbest)  
     • [Выделение интерфейсов](#archinterfaces)  
@@ -118,6 +118,8 @@
     • [Моки](#nunitmocks)  
     • [Стабы](#nunitstubs)  
     • [Moq](#nunitmoq)  
+• [Мутационное тестирование](#mutationtesting)  
+    • [Stryker](#mutationtestingstryker)  
 • Git flow 2  
     • [Минимальный вариант](#gitflowminimum)  
     • [Ветвление](#gitflowfork)  
