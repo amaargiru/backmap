@@ -150,6 +150,7 @@
     • [Взаимодействие ASP.NET Core MVC и React](#netaspnetcorewithreact)  
 • [API 1](#netapibasic)  
     • [REST 1](#netrestbasic)  
+    • [sockets](#netsocketsbasic)    
     • [gRPC 1](#netgrpcbasic)  
 • [ASP.NET Core Web API 1](#netaspnetcorewebapi)  
     • [Minimal API](#netaspnetcorewebapiminimalapi)  
