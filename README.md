@@ -15,9 +15,12 @@
     • [Интерфейсы](#basiccsharpinterfaces)  
     • [Делегаты](#basiccsharpdelegates)  
     • [Исключения](#basiccsharpexceptions)  
+        • Правила обработки исключений  
+        • Дополнительная информация для исключений  
     • [Garbage collector](#basiccsharpgc)  
     • [Nullable](#basiccsharpnullable)  
     • [Атрибуты](#basiccsharpattributes)  
+        • Условные атрибуты  
 • Структуры данных  
     • [Массив](#basicarray)  
     • [О-о-о! Большое!](#basicbigo)  
