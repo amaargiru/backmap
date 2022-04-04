@@ -10,6 +10,7 @@
     •+ [Базовые знания](#basiccsharpbasic)  
     • [Классы](#basiccsharpclasses)  
     •+ [LINQ](#basiccsharplinq)  
+        •+ [Примеры использования](#basiccsharplinqexamples)  
     • [События](#basiccsharpevents)  
     • [Обобщения](#basiccsharpgenerics)  
     • [Интерфейсы](#basiccsharpinterfaces)  
@@ -153,8 +154,8 @@
 
 ### Pet-проекты, часть 1
 
-• [Игра 2048](#petprojects2048)  
-• [Syncro, программа резервного копирования](#petprojectssyncro)  
+•+ [Игра 2048](#petprojects2048)  
+•+ [Syncro, программа резервного копирования](#petprojectssyncro)  
 
 ### Сеть  
 
@@ -345,7 +346,7 @@ using System;
 Встроенные типы = int, string и т. п.  
 static - оперирует с самим типом, не static - оперирует с экземпляром типа.  
 Типы значений = все числовые типы, char, bool, struct и enum.  
-uint ~ 4 млрд., соотв. int ~ ±2 млрд. (32 бита).  
+uint ~ 4 млрд., соответственно, int ~ ±2 млрд. (32 бита).  
 ulong ~ 18 квинтиллионов (10^18), соотв. long ~ ± 9 квинтиллионов (64 бита).  
 Ссылочные типы = все классы, строки, массивы, делегаты и интерфейсы.  
 Операция деления на целочисленных типах отбрасывает остаток.  
@@ -374,12 +375,25 @@ virtual - override (!!! примеры).
 Структура может быть readonly, тогда все поля автоматически становятся тоже readonly. Можно объявить readonly функцию структуры, тогда на этапе компиляции будет выдаваться ошибка при попытке изменить любое поле.  
 
 Модификаторы доступа:  
-public — полный доступ, неявный доступ для интерфейсов и членов перечисления.  
-internal — доступ внутри содержащей сборки и в дружественных сборках (помеченных атрибутом сборки InternalsVisibleTo), стандартный доступ для невложенного типа.  
-private — доступ только внутри содержащего типа, стандартный доступ для членов класса или структуры.  
-protected — доступ внутри содержащего типа и в его подклассах.  
-protected internal — объединение доступностей protected и internal (бОльшая доступность), доступ открыт как из содержащей сборки, так и из производных типов.  
-private protected — пересечение доступностей internal и protected (меньшая доступность), доступ могут иметь только производные типы и только в пределах содержащей сборки.  
+
+<style>
+table th:first-of-type {
+    width: 25%;
+}
+table th:nth-of-type(2) {
+    width: 75%;
+}
+</style>
+
+| Модификатор | Значение |  
+| :- | :- |  
+| public | полный доступ, неявный доступ для интерфейсов и членов перечисления |  
+| internal | доступ внутри содержащей сборки и в дружественных сборках (помеченных атрибутом сборки InternalsVisibleTo), стандартный доступ для невложенного типа |  
+| private | доступ только внутри содержащего типа, стандартный доступ для членов класса или структуры |   
+| protected | доступ внутри содержащего типа и в его подклассах |  
+| protected internal | объединение доступностей protected и internal (бОльшая доступность), доступ открыт как из содержащей сборки, так и из производных типов |  
+| private protected | пересечение доступностей internal и protected (меньшая доступность), доступ могут иметь только производные типы и только в пределах содержащей сборки |  
+
 Подкласс может иметь только такую же или меньшую доступность.  
 Тип устанавливает верхний предел доступности своих членов.  
 
@@ -895,12 +909,12 @@ table th:nth-of-type(3) {
 | Any | Проверяет, содержит ли последовательность хотя бы один элемент, удовлетворяющий условию | Единственное четное число в нечетной последовательности |  
 | Append | Добавляет значение в конец последовательности, выдает новую последовательность |  
 | AsEnumerable | Просто говорит компилятору, что нужно использовать метод, относящийся к IEnumerable, а не к, скажем, IQueryable |  
-| Average | Вычисляет среднее значение |  
+| [Average](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Average.cs) | Вычисляет среднее значение |  
 | Cast | Преобразует коллекции старого типа (non-generic collections) на базе IEnumerable в коллекцию нового типа на базе IEnumerable<T> |  
 | Concat | Конкатенация двух последовательностей|  
 | Contains | Проверяет, содержит ли последовательность указанный элемент |  
-| Count | Возвращает количество элементов |  
-| Count | Возвращает количество элементов, удовлетворяющих условию |  
+| [Count](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Count.cs) | Возвращает количество элементов |  
+| [Count](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Count.cs) | Возвращает количество элементов, удовлетворяющих условию |  
 | DefaultIfEmpty | Возвращает коллекцию с одним элементом по умолчанию, если входная последовательность пуста |  
 | Distinct | Возвращает только различающиеся элементы последовательности |  
 | ElementAt | Возвращает элемент последовательности, расположенный по указанному индексу |  
@@ -919,12 +933,12 @@ table th:nth-of-type(3) {
 | Last | Возвращает последний элемент последовательности, удовлетворяющий условию |  
 | LastOrDefault | Возвращает последний элемент последовательности или значение по умолчанию, если ни одного элемента не найдено |  
 | LastOrDefault | Возвращает последний элемент последовательности, удовлетворяющий условию или значение по умолчанию, если ни одного элемента не найдено |  
-| LongCount | Возвращает количество элементов типа long |  
-| LongCount | Возвращает количество элементов типа long, удовлетворяющих условию |  
-| Max | Возвращает максимальное значение, содержащееся в последовательности |  
-| Max | Вызывает функцию преобразования для каждого элемента последовательности и возвращает максимальное значение, содержащееся в полученной последовательности |  
-| Min |  Возвращает минимальное значение, содержащееся в последовательности |  
-| Min | Вызывает функцию преобразования для каждого элемента последовательности и возвращает минимальное значение, содержащееся в полученной последовательности |  
+| [LongCount](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Count.cs) | Возвращает количество элементов типа long |  
+| [LongCount](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Count.cs) | Возвращает количество элементов типа long, удовлетворяющих условию |  
+| [Max](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Max.cs) | Возвращает максимальное значение, содержащееся в последовательности |  
+| [Max](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Max.cs) | Вызывает функцию преобразования для каждого элемента последовательности и возвращает максимальное значение, содержащееся в полученной последовательности |  
+| [Min](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Min.cs) | Возвращает минимальное значение, содержащееся в последовательности |  
+| [Min](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Min.cs) | Вызывает функцию преобразования для каждого элемента последовательности и возвращает минимальное значение, содержащееся в полученной последовательности |  
 | OfType | Преобразует IEnumerable к IEnumerable<T>, отбрасывая элементы с несоответствующим типом |  
 | OrderBy | Сортирует элементы последовательности в порядке возрастания |  
 | OrderByDescending | Сортирует элементы последовательности в порядке убывания |  
@@ -940,7 +954,7 @@ table th:nth-of-type(3) {
 | Skip | Возвращает элементы последовательности за вычетом заданного числа первых элементов
 | SkipLast | Возвращает элементы последовательности за вычетом заданного числа последних элементов |  
 | SkipWhile | Пропускает элементы последовательности, пока они удовлетворяют заданному условию, и затем возвращает оставшиеся элементы |
-| Sum | Возвращает сумму последовательности |
+| [Sum](github.com/dotnet/runtime/blob/main/src/libraries/System.Linq/src/System/Linq/Sum.cs) | Возвращает сумму последовательности |
 | Take | Возвращает заданное число первых элементов |  
 | TakeLast | Возвращает заданное число последних элементов  
 | TakeWhile | Возвращает элементы последовательности, пока они удовлетворяют заданному условию, и затем пропускает оставшиеся элементы |  
@@ -955,21 +969,156 @@ table th:nth-of-type(3) {
 | Where | Выполняет фильтрацию последовательности |  
 | Zip | Возвращает последовательность, содержащую объединенные элементы двух входных последовательностей |  
 
+### Примеры использования LINQ <a name="basiccsharplinqexamples"></a>
+
+Сначала создаем множество сотрудников...
+~~~csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace Linq
+{
+    public static class GenerateRandomStaff
+    {
+        private static readonly Random random = new();
+        const int minOvertime = -10;
+        const int maxOvertime = 100;
+
+        public static Dictionary<string, int> Get(int workersNum)
+        {
+            Dictionary<string, int> staff = new();
+
+            while (staff.Count < workersNum)
+            {
+                var workerName = Path.GetRandomFileName()[..3];
+                var workerOvertime = random.Next(minOvertime, maxOvertime);
+
+                staff[workerName] = workerOvertime;
+            }
+
+            return staff;
+        }
+    }
+}
+~~~
+
+...потом обрабатываем эти данные:
+
+~~~csharp
+using Linq;
+using System;
+using System.Linq;
+
+namespace PlayingWithLinq
+{
+    class Program
+    {
+        static void Main()
+        {
+            const int WorkersNum = 100;
+
+            var staffA = GenerateRandomStaff.Get(WorkersNum);
+            var staffB = GenerateRandomStaff.Get(WorkersNum);
+
+            // Сумма положительных переработок A
+            var SumPositiveOvertimeA = staffA
+                .Where(worker => worker.Value > 0)
+                .Sum(worker => worker.Value);
+
+            // Средняя переработка A
+            var AverageOvertimeA = staffA
+                .Average(worker => worker.Value);
+
+            // Средняя переработка A и B // (сначала объединить, потом посчитать)
+            var AverageOvertimeAB = staffA
+                .Concat(staffB)
+                .Average(worker => worker.Value);
+
+            // Разницу в днях переработки между A и B
+            var DiffOvertimeAB =
+                staffA.Sum(worker => worker.Value)
+                - staffB.Sum(worker => worker.Value);
+
+            // Список сотрудников A, переработавших не менее 22 дней
+            var OvertimeLimit = 22;
+            var OvertimeOverLimit = staffA
+                .Where(worker => worker.Value >= OvertimeLimit)
+                .ToDictionary(worker => worker.Key, worker => worker.Value);
+
+            // Список сотрудников, работающих в обоих компаниях
+            var WorkersAB = staffA
+                .Where(worker => staffB.ContainsKey(worker.Key))
+                .ToDictionary(worker => worker.Key, worker => worker.Value);
+
+            // Устранение выбросов A
+            var OvertimeLimitMin = -5;
+            var OvertimeLimitMax = 80;
+
+            bool isMatchesLimits(int x) => (x > OvertimeLimitMin) && (x < OvertimeLimitMax);
+
+            var ApplyOvertimeLimits = staffA
+                .Where(worker => isMatchesLimits(worker.Value))
+                .ToDictionary(worker => worker.Key, worker => worker.Value);
+
+            // Список тех, чья первая буква от 'a' до 'j'
+            var startChar = 'a';
+            var endChar = 'j';
+
+            bool isMatchesCharRange(char c) => (c >= startChar) && (c <= endChar);
+
+            var ApplyNameRange = staffA
+                .Where(worker => isMatchesCharRange(worker.Key[0]))
+                .ToDictionary(worker => worker.Key, worker => worker.Value);
+
+            // Количество тех, чьё имя содержит сочетание "go"
+            var searchPhrase = "go";
+
+            var ApplyNameFiler = staffA
+                .Where(worker => worker.Key.Contains(searchPhrase))
+                .Count();
+
+            // Средняя переработка тех, у кого в имени 2 буквы 'x'
+            var searchChar = 'x';
+            var searchNumber = 2;
+
+            bool isMatchesCharNumber(string s) => s.Count(ch => ch == searchChar) == searchNumber;
+
+            var ApplyNameFiler2 = staffA
+                .Where(worker => isMatchesCharNumber(worker.Key))
+                .Average(worker => worker.Value);
+
+            Console.ReadKey();
+        }
+    }
+}
+~~~
+
 ### Nullable <a name="basiccsharpnullable"></a>  
 
 Три операции для работы со значениями null:  
 1. Операция объединения с null:  
+~~~csharp
 int b = a ?? 7;  
+~~~
 Если значение слева ≠ null, значение справа не вычисляется.  
 2. null-условная операция (элвис-операция):  
+~~~csharp
 string s = sb?.ToString();  
+~~~
 Результатом будет значение или null, исключение никогда не возникает. Если элвис-операция столкнется с null, то прекращает дальнейшие вычисления. Окончательное выражение должно уметь принимать null.  
 3. Операция присваивания с объединением с null. Операция выполняет присваивание только если переменная не null:  
+~~~csharp
 s ??= “Welcome”;  
+~~~
 эквивалентно  
+~~~csharp
 if (s != null) s = “Welcome”;  
+~~~
 Операция объединения с null и элвис-операция хорошо сочетаются:  
+~~~csharp
 string s = sb?.ToString() ?? “Empty”;  
+~~~
 
 ### Таблица выбора структуры данных <a name="basicstructselectiontable"></a>  
 
@@ -1008,12 +1157,12 @@ table th:nth-of-type(3) {
 | Динамический массив | List\<T> |  | 1 | n | n | n | n |
 | Односвязный список | ListDictionary |  | n | n | 1 | 1 | n |
 | Двусвязный список | LinkedList\<T> |  | n | n | 1 | 1 | n |
-| Хэш таблица | HashSet\<T>, Dictionary\<K,V>, OrdereDictionary\<T> |  |  | 1 [n] | 1 [n] | 1 [n] | n |
-| Бинарное дерево | SortedDictionary\<T> |  | logn [n] | logn [n] | logn [n] | logn [n] | n |
+| Хэш таблица | HashSet\<T>, Dictionary\<K,V>, OrdereDictionary\<T> |  |  | 1<br> [n] | 1<br> [n] | 1<br> [n] | n |
+| Бинарное дерево | SortedDictionary\<T> |  | logn<br> [n] | logn<br> [n] | logn<br> [n] | logn<br> [n] | n |
 | Б-дерево |  | Для памяти с медленным доступом | logn | logn | logn | logn | n |
 | КЧ дерево | SortedSet\<T> |  | logn | logn | logn | logn | n |
 | АВЛ дерево |  |  | logn | logn | logn | logn | n |
-| Префиксное дерево |  | T9, [алгоритм Ахо–Корасик](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm) |  | key | key | key |  |
+| Префиксное дерево |  | T9, алгоритм [Ахо–Корасик](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm) |  | key | key | key |  |
 
 ### FizzBuzz <a name="simplefizzbuzz"></a>  
 
@@ -1022,7 +1171,7 @@ table th:nth-of-type(3) {
 Задание: Напишите программу, которая выводит на экран числа от 1 до 100. При этом вместо чисел, кратных трем, программа должна выводить слово «Fizz», а вместо чисел, кратных пяти — слово «Buzz». Если число кратно и 3, и 5, то программа должна выводить слово «FizzBuzz».  
 
 Самый простой вариант:  
-```cs
+~~~csharp
 const int Max = 100;
 
 for (var i = 1; i <= Max; i++)
@@ -1044,11 +1193,11 @@ for (var i = 1; i <= Max; i++)
       Console.WriteLine(i);
    }
 }
-```
+~~~
 
 или чуточку улучшенный вариант:  
 
-```cs
+~~~csharp
 const int Max = 100;
 
 for (var i = 1; i <= Max; i++)
@@ -1073,7 +1222,7 @@ for (var i = 1; i <= Max; i++)
       Console.WriteLine(i);
    }
 }
-```
+~~~
 
 Больше подробностей про оптимизацию задачи FizzBuzz — «[FizzBuzz по-сениорски](https://habr.com/ru/post/540136/)».  
 
