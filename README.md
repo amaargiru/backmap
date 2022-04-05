@@ -20,7 +20,7 @@
         • Дополнительная информация для исключений  
     • [Garbage collector](#basiccsharpgc)  
     •+ [Nullable](#basiccsharpnullable)  
-    • [Attributes](#basiccsharpattributes)  
+    •+ [Attributes](#basiccsharpattributes)  
         • Условные атрибуты  
         • Создание настраиваемых атрибутов    
         • Обращение к атрибутам при помощи отражения  
@@ -379,11 +379,12 @@ virtual - override (!!! примеры).
 Модификаторы доступа:  
 
 <style>
-table th:first-of-type {
-    width: 25%;
+table:nth-of-type(1) {
+    display:table;
+    width:100%;
 }
-table th:nth-of-type(2) {
-    width: 75%;
+table:nth-of-type(1) th:nth-of-type(2) {
+    width:75%;
 }
 </style>
 
@@ -890,17 +891,6 @@ __Синтаксис__
 Исторически сложилось так, что у запросов LINQ две возможных формы написания: __синтаксис запросов__ (query syntax) и __синтаксис методов__ (method syntax), иногда называемый также __текучим синтаксисом__ (fluent syntax). Два примера выше как раз и написаны с применением разных синтаксисов, но делают абсолютно одно и то же.  
 Далее мы сосредоточимся на синтаксисе методов, так как он: а) имеет больше методов и б) позволяет добавлять методы самостоятельно. Есть кейсы (МГИМО финишд, ага), в которых синтаксис запросов имеет некоторые преимущества, потому что включает, например, ключевое слово let, позволяющее ввести новую переменную прямо посреди запроса или повышенная удобочитаемость длинных запросов. Но в целом, особенно с учетом того, что стандарт [ECMA-334](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf) недвусмысленно намекает на некоторую «вторичность» синтаксиса запросов (пункт 12.17.3.1, «The C# language does not specify the execution semantics of query expressions. Rather, query expressions are translated into invocations of methods that adhere to the query-expression pattern»), можно рассматривать синтаксис методов как основной, а синтаксис запросов — как вспомогательный.  
 
-<style>
-table th:first-of-type {
-    width: 15%;
-}
-table th:nth-of-type(2) {
-    width: 60%;
-}
-table th:nth-of-type(3) {
-    width: 25%;
-}
-</style>
 | Метод | Функция | Пример |
 | :- | :- | :- |
 | Aggregate | Объединяет элементы последовательности, используя входную функцию | Перемножение элементов последовательности |  
@@ -1132,14 +1122,6 @@ string s = sb?.ToString() ?? “Empty”;
 ~~~
 
 Возможные значения target показаны в таблице:
-<style>
-table th:first-of-type {
-    width: 25%;
-}
-table th:nth-of-type(2) {
-    width: 75%;
-}
-</style>
 
 | Значение | Область применения |
 | :- | :- |
