@@ -49,6 +49,7 @@
         • [Timsort](#basictimsort)  
         • [Introsort](#basicintrosort)  
         • [Поразрядная (Radix)](#basicradixsort)  
+        •+ [Таблица сравнения методов сортировки](#basicsortingcomparisontable)  
     • Поиск  
         • [Линейный поиск](#basiclinearsearch)  
         • [Бинарный поиск](#basicbinarysearch)  
@@ -1276,6 +1277,46 @@ Array.ForEach(arr, Console.WriteLine);
 
 Console.ReadKey();
 ```
+
+### Таблица сравнения методов сортировки <a name="basicsortingcomparisontable"></a>  
+  
+<style>
+table th:first-of-type {
+    width: 35%;
+}
+table th:nth-of-type(2) {
+    width: 35%;
+}
+table th:nth-of-type(3) {
+    width: 5%;
+}
+table th:nth-of-type(4) {
+    width: 5%;
+}
+table th:nth-of-type(5) {
+    width: 5%;
+}
+table th:nth-of-type(6) {
+    width: 5%;
+}
+table th:nth-of-type(7) {
+    width: 5%;
+}
+table th:nth-of-type(8) {
+    width: 5%;
+}
+</style>
+
+| Сортировка | Преимущество | Best | Avg | Worst | Mem | Stable | Paral |
+| :- | :- | :-: | :-: | :-: | :-: | :-: | :-: |
+| Пузырьковая<br>(Bubble) | Простейшая реализация | n | n^2 | n^2 | 1 | + | + |
+| Быстрая<br>(Quick) | Хорошее быстродействие в среднем случае | n*logn | n*logn | n^2 | logn | +/-<br>(depends) | + |
+| Слиянием<br>(Merge) | Работает с последовательным доступом | n*logn | n*logn | n*logn | n<br>(depends) | + | + |
+| Пирамидальная<br>(Heap) | Хорошая производительность в наихудшем случае | n*logn | n*logn | n*logn | 1 | - | - |
+| Вставками<br>(Insertion) | Рекомедуется для почти отсортированных данных или для малого количества элементов | n | n^2 | n^2 | 1 | + | - |
+| Timsort | Комбинированный алгоритм. Стандарт для Python, Java, Swift | n*logn | n*logn | n*logn | logn | - | - |
+| Introsort | Комбинированный алгоритм. Стандарт для .Net | n*logn | n*logn | n*logn | logn | - | - |
+| Поразрядная<br>(Radix) | Быстрая сортировка для целых чисел и строк | n*w | n*w | n*w | n+w | +/-<br>(depends) | + |
 
 ### SOLID <a name="arcchsolid"></a>  
 
