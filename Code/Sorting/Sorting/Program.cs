@@ -13,5 +13,6 @@ class Program
       var mergeSortedArray = Merge.Sort(randomArray);
       var heapSortedArray = Heap.Sort(randomArray);
       var insertionSortedArray = Insertion.Sort(randomArray);
+      var radixSortedArray = Radix.Sort(randomArray);
    }
 }
