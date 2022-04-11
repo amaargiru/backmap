@@ -1,8 +1,8 @@
 namespace LearnSorting;
 
-static class Merge
+internal static class Merge
 {
-   public static int[] Sort(int[] randomArray)
+   internal static int[] Sort(int[] randomArray)
    {
       var sortedArray = (int[])randomArray.Clone();
 

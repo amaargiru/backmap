@@ -1,8 +1,8 @@
 namespace LearnSorting;
 
-static class Bubble
+internal static class Bubble
 {
-   public static int[] Sort(int[] randomArray)
+   internal static int[] Sort(int[] randomArray)
    {
       var arr = (int[])randomArray.Clone();
       var len = arr.Length;

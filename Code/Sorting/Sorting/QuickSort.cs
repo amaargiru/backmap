@@ -1,8 +1,8 @@
 namespace LearnSorting;
 
-static class Quick
+internal static class Quick
 {
-   public static int[] Sort(int[] randomArray)
+   internal static int[] Sort(int[] randomArray)
    {
       var arr = (int[])randomArray.Clone();
 

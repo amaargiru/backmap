@@ -11,5 +11,6 @@ class Program
       var bubbleSortedArray = Bubble.Sort(randomArray);
       var quickSortedArray = Quick.Sort(randomArray);
       var mergeSortedArray = Merge.Sort(randomArray);
+      var heapSortedArray = Heap.Sort(randomArray);
    }
 }
