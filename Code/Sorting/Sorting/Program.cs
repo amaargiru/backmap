@@ -12,5 +12,6 @@ class Program
       var quickSortedArray = Quick.Sort(randomArray);
       var mergeSortedArray = Merge.Sort(randomArray);
       var heapSortedArray = Heap.Sort(randomArray);
+      var insertionSortedArray = Insertion.Sort(randomArray);
    }
 }
