@@ -1,10 +1,10 @@
-# Backmap — памятка программиста
+# Backmap — памятка
 
 ## Оглавление
 
 ### Начальные знания  
 
-• # 1  
+• C# 1  
     •+ [Базовые знания](#basiccsharpbasic)  
     • [Классы](#basiccsharpclasses)  
     •+ [LINQ](#basiccsharplinq)  
@@ -22,10 +22,11 @@
         • Условные атрибуты  
         • Создание настраиваемых атрибутов    
         • Обращение к атрибутам при помощи отражения  
+
 • Структуры данных  
     •+ [Массив](#basicarray)  
     •+ [О-о-о! Большое!](#basicbigo)  
-    • [Динамический массив](#basicdarray)  
+    •+ [Динамический массив](#basicdarray)  
     • [Односвязный список](#basicslist)  
     • [Двусвязный список](#basicdlist)  
     • [Хэш-таблица](#basichashtable)  
@@ -36,6 +37,7 @@
     • [АВЛ-дерево](#basicavltree)  
     • [Префиксное дерево](#basictrie)  
     •+ [Таблица выбора структуры данных](#basicstructselectiontable)  
+
 • Алгоритмы 1  
     •+ [FizzBuzz](#simplefizzbuzz)  
     • Сортировки  
@@ -63,6 +65,7 @@
         •+ [Список инцидентности](#basicgraphincidencelist)  
         •+ [Сравнение структур представления графов](#basicgraphstructcomparison)  
     • [ДПФ/БПФ](#basicfastfouriertransform)  
+
 • SQL 1  
     • [Зачем нужен SQL?](#whysql)  
     • [Create](#sqlbasiccreate)  
@@ -74,15 +77,19 @@
     • [Drop](#sqlbasicdrop)  
     • [Show](#sqlbasicshow)  
     • [Join](#sqlbasicjoin)  
+
 • [MS SQL 1](#basicmssql)  
+
 • Entity Framework 1  
     • [Code First](#efbasiccodefirst)  
     • [Миграция](#efbasicmigration)  
     • [Change tracker API](#efbasicctapi)  
+
 • Профилирование 1  
     • [BenchmarkDotNet](#profilingbasicbenchmarkdotnet)  
         • [Сравнение двух вариантов FizzBuzz](#profilingbasicfizzbuzzcompare)  
         • [Сравнение восьми вариантов сортировок](#profilingbasicsortingcompare)  
+
 • C# 2  
     • Асинхронное программирование (docs.microsoft.com/ru-ru/dotnet/standard/async)  
         • [await/async](#csharpawaitasync)  
@@ -109,6 +116,13 @@
     • [AutoMapper](#csharpautomapper)  
     • [HangFire](#csharphangfire)  
     • [Stateless](#csharpstateless)  
+
+• F# 1    
+    • Преимущества F#
+    • Недостатки F#
+    • Простейший код
+    • Подмешивание кода F# к коду C#
+
 • Архитектурные принципы и паттерны 1  
     • [Какой код лучше?](#archwhatbest)  
     • [Выделение интерфейсов](#archinterfaces)  
@@ -130,19 +144,23 @@
     • [CQRS](#designpatterncqrs)  
     • [Strategy](#designpatternstrategy)  
     • [Observer](#designpatternobserver)  
+
 • Логгирование 1  
     • [Serilog](#loggingserilog)  
         • [Вывод логов в консоль](#loggingconsole)  
         • [Запись логов в файл](#loggingfile)  
         • [Анализ логов](#logginganalize)  
+
 • NUnit 1  
     • [Простые тесты](#nunitsimpletests)  
     • [Архитектура, пригодная для тестирования](#nunittestarch)  
     • [Моки](#nunitmocks)  
     • [Стабы](#nunitstubs)  
     • [Moq](#nunitmoq)  
+
 • [Мутационное тестирование](#mutationtesting)  
     • [Stryker](#mutationtestingstryker)  
+
 • Git flow 2  
     •+ [Минимальный вариант](#gitflowminimum)  
     • [Накопление микрокоммитов с их последующим объединением](#gitflowmicrosum)  
@@ -163,32 +181,44 @@
 ### Сеть  
 
 • [Протокол HTTP/HTTPS](#nethttphttps)  
+
 • [HTML 1](#nethtmlbasic)  
     • [DOM 1](#netdombasic)  
+
 • [CSS 1](#netcssbasic)  
+
 • [TypeScript 1](#nettypescript)  
+
 • [React 1](#netreact)  
+
 • [Отладка в браузере 1](#netbrowserdebug)  
+
 • [ASP.NET Core MVC 1](#netaspnetcoremvc)  
     • [Подключение к БД](#netaspnetcoredatabasic)  
     • [Фильтры](#netaspnetcorefilters)  
     • [Атрибуты](#netaspnetcoreattributes)  
     • [Middleware](#netaspnetcoremiddleware)  
     • [Взаимодействие ASP.NET Core MVC и React](#netaspnetcorewithreact)  
+
 • [API 1](#netapibasic)  
     • [REST 1](#netrestbasic)  
     • [sockets](#netsocketsbasic)    
     • [gRPC 1](#netgrpcbasic)  
+
 • [ASP.NET Core Web API 1](#netaspnetcorewebapi)  
     • [Minimal API](#netaspnetcorewebapiminimalapi)  
     • [Конфигурирование](#netaspnetcorewebapiconfig)  
     • [Аутентификация](#netaspnetcorewebapiauth)    
     • [Проблемы синхронной аутентификации сервер/клиент](#netaspnetcorewebapiauthsync)  
+
 • [Razor 1](#netrazorbasic)  
     • [Razor Pages](#netrazorpagesbasic)  
     • [Razor Components](#netrazorcomponentsbasic)  
+
 • [FluentValidation](#netfluentvalidation)  
+
 • [Polly](#netpolly)  
+
 • [Selenium](#netselenium)  
 
 ### Облака
@@ -203,9 +233,11 @@
     • [Хранимые процедуры](#advancedsqlstoredprocedures)  
     • [Триггеры](#advancedsqltriggers)  
     • [Ограничения](#advancedsqlconstraints)  
+
 • [NoSQL](#advancednosql)  
     • [Key-Value хранилища (Redis)](#advancednosqlkvsredis)  
     • [JSON (MongoDB)](#advancednosqljsonmongodb)  
+
 • Entity Framework 2  
     • [Кеш второго уровня](#advancedefsecondlevelcash)  
     • [Lazy loading](#advancedeflazyloading)  
@@ -213,35 +245,44 @@
     • [Explicit loading](#advancedefexplicitloading)  
     • [TPT](#advancedeftpt)  
     • [TPH](#advancedeftph)  
+
 • Архитектурные паттерны 2  
     • [DI Life Cycles](#advancedarchpatternsdilifecycles)  
         • [Scoped](#advancedarchpatternsdilifecyclesscoped)  
         • [Transient](#advancedarchpatternsdilifecyclestransient)  
         • [Singleton](#advancedarchpatternsdilifecyclessingleton)  
+
 • Паттерны проектирования 2  
     • [Builder](#advanceddesignpatternsbuilder)  
     • [Decorator](#advanceddesignpatternsdecorator)  
     • [Facade](#advanceddesignpatternsfacade)  
     • [Factory](#advanceddesignpatternsfactory)  
     • [Mediator/MediatR](#advanceddesignpatternsmediator)  
+
 • ASP.NET Core MVC 2  
     • [Quartz.NET](#advancedaspnetcoremvcquartznet)  
+
 • ASP.NET Core Web API 2  
     • [Swagger](#advancedwebapiswagger)  
+
 • [Razor 2](#advancedrazor)  
+
 • [Blazor 1](#advancedblazorbasic)  
+
 • Профилирование 2  
     • [dotTrace](#advancedprofilingjustdottrace)  
     • [dotTrace + SQL](#advancedprofilingdottracesql)  
     • [dotTrace + HTTP](#advancedprofilingdottracehttp)  
     • [Анализ IL-кода](#advancedprofilingilcodeanalysis)  
     • [Sharplab](#advancedprofilingsharplab)  
+
 • Логгирование 2  
     • [ELK Stack](#advancedloggingelkstack)  
         • [Elasticsearch](#advancedloggingelasticsearch)  
             • [OpenSearch](#advancedloggingopensearch)  
         • [Logstash](#advancedlogginglogstash)  
         • [Kibana](#advancedloggingkibana)  
+
 • Алгоритмы 2  
     • Операции со строками  
         • [Алгоритм Ахо-Корасик](#advancedalgorithmsahocorasickalgorithm)  
@@ -281,6 +322,7 @@
         • [Алгоритм имитации отжига](#advancedalgorithmstravellingsalesmansimulatedannealing)  
     • [Синтез и оценка алгоритмов](#advancedalgorithmssynthesisandevaluation)  
     • [LeetCode](#advancedalgorithmsleetcode)  
+
 • NUnit 2  
     • [FluentAssertions](#advancednunitfluentassertions)  
     • [Bogus](#advancednunitbogus)  
@@ -289,14 +331,17 @@
 ### Системный подход  
 
 • [Системный дизайн 1](#systemdesignbasic)  
+
 • [Микросервисная архитектура](#microservicesbasic)  
     • [RabbitMQ](#microservicesrabbitmq)  
     • [MassTramsit](#microservicesmasstransmit)  
     • [Ocelot](#microservicesocelot)  
     • [Docker](#microservicesdocker)  
     • [Kubernetes](#microserviceskubernetes)  
+
 • [CD/CI](#cdcibasic)  
     • [GitHub Actions (docs.microsoft.com/ru-ru/dotnet/devops/github-actions-overview)](#githubactionsbasic)  
+
 • [Системный дизайн 2](#systemdesignadvanced)  
 
 ### Pet-проекты, часть 2
@@ -1191,11 +1236,25 @@ string s = sb?.ToString() ?? “Empty”;
 
 ### Динамический массив <a name="basicdarray"></a>  
 
+В C# это List\<T>. Реализует ICollection\<T>, IEnumerable\<T>, IList\<T>, IReadOnlyCollection\<T>, IReadOnlyList\<T>, ICollection, IEnumerable, IList.  
 
+List\<T> реализован на базе массива, размер которого динамически увеличивается по мере необходимости.  
+
+Имеет методы BinarySearch и Sort.
 
 ### Односвязный список <a name="basicslist"></a>  
+
+Односвязный список представляет набор связанных узлов, каждый из которых хранит собственно данные и ссылку на следующий узел. В практике малоприменим, но его любят использовать интервьюеры на собеседованиях, чтобы кандидат мог блеснуть своими алгоритмическими знаниями.
+
 ### Двусвязный список <a name="basicdlist"></a>  
+
+В C# - [LinkedList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1), гораздо практичнее и удобнее односвязного списка. Реализует ICollection\<T>, IEnumerable\<T>, IReadOnlyCollection\<T>, ICollection, IEnumerable, IDeserializationCallback, ISerializable.  
+
+
 ### Хэш-таблица <a name="basichashtable"></a>  
+
+В C# это HashSet\<T>, Dictionary\<K,V> и OrderedDictionary\<T>. HashSet\<T>  Dictionary\<K,V> имеют [сходное быстродействие](https://stackoverflow.com/questions/2728500/hashsett-versus-dictionaryk-v-w-r-t-searching-time-to-find-if-an-item-exist) и оба сильно выигрывают у List\<T> на операциях поиска нужного значения.
+
 ### Решение проблем вычисления хеша <a name="basichashtableproblem"></a>  
 ### Бинарное дерево <a name="basicbinarytree"></a>  
 ### Б-дерево <a name="basicbtree"></a>  
@@ -1240,9 +1299,9 @@ table th:nth-of-type(8) {
 | :- | :- | :- | :-: | :-: | :-: | :-: | :-: |
 | Массив | Array, SortedList, Stack, Queue, PriorityQueue |  | 1 | n |  |  | n |
 | Динамический массив | List\<T> |  | 1 | n | n | n | n |
-| Односвязный список | ListDictionary |  | n | n | 1 | 1 | n |
-| Двусвязный список | LinkedList\<T> |  | n | n | 1 | 1 | n |
-| Хэш таблица | HashSet\<T>, Dictionary\<K,V>, OrdereDictionary\<T> |  |  | 1<br> [n] | 1<br> [n] | 1<br> [n] | n |
+| Односвязный список | ListDictionary | Не рекомендуется для применения, как и другие коллекции из пространства имен [System.Collections.Specialized](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized) | n | n | 1 | 1 | n |
+| Двусвязный список | [LinkedList\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1) |  | n | n | 1 | 1 | n |
+| Хэш таблица | HashSet\<T>, Dictionary\<K,V>, [OrderedDictionary\<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.ordereddictionary) |  |  | 1<br> [n] | 1<br> [n] | 1<br> [n] | n |
 | Бинарное дерево | SortedDictionary\<T> |  | logn<br> [n] | logn<br> [n] | logn<br> [n] | logn<br> [n] | n |
 | Б-дерево |  | Для памяти с медленным доступом | logn | logn | logn | logn | n |
 | КЧ дерево | SortedSet\<T> |  | logn | logn | logn | logn | n |
