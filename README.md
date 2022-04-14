@@ -1878,6 +1878,28 @@ git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b
 git rebase  
 squash  
 
+### HTML 1 <a name="nethtmlbasic"></a>
+
+Пустая HTML-страница:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>English Flywheel</title>
+  </head>
+  <body>
+    <!--This is just a comment-->
+  </body>
+</html>
+```
+
+Добавляем иконку, вставив
+```html
+<link rel="icon" type="image/png" href="icon.png"/>
+```
+внутрь тега \<head>.
+
 ### Что почитать  
 
 ### C# <a name="bibliographycsharp"></a>
