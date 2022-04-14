@@ -20,10 +20,10 @@
     •+ [Nullable](#basiccsharpnullable)  
     •+ [Attributes](#basiccsharpattributes)  
         • Условные атрибуты  
-        • Создание настраиваемых атрибутов    
+        • Создание собственных атрибутов  
         • Обращение к атрибутам при помощи отражения  
 
-• Структуры данных  
+•+ Структуры данных  
     •+ [Массив](#basicarray)  
     •+ [О-о-о! Большое!](#basicbigo)  
     •+ [Динамический массив](#basicdarray)  
@@ -33,14 +33,14 @@
         •+ [Решение проблем вычисления хеша](#basichashtableproblem)  
     •+ [Бинарное дерево](#basicbinarytree)  
     •+ [B-дерево (Би-дерево)](#basicbtree)  
-    • [Красно-черное дерево](#basicrbtree)  
-    • [АВЛ-дерево](#basicavltree)  
-    • [Префиксное дерево](#basictrie)  
+    •+ [Красно-черное дерево](#basicrbtree)  
+    •+ [АВЛ-дерево](#basicavltree)  
+    •+ [Префиксное дерево](#basictrie)  
     •+ [Таблица выбора структуры данных](#basicstructselectiontable)  
 
 • Алгоритмы 1  
     •+ [FizzBuzz](#simplefizzbuzz)  
-    • Сортировки  
+    •+ Сортировки  
         •+ [Пузырьковая (Bubble)](#basicbubblesort)  
         •+ [Быстрая (Quick)](#basicquicksort)  
         •+ [Слиянием (Merge)](#basicmergesort)  
@@ -105,7 +105,7 @@
             • Interlocked  
             • volatile  
             • slim-версии объектов  
-    • [2/4 ядра/потока](#csharp24threads)  
+    • [2/4 ядра/потока](#csharp2or4threads)  
         • [Параллельное синхронизированное выполнение в 2 потока (ping-pong)](#csharppingpong2threads)  
         • [Параллельное синхронизированное выполнение на 2 ядрах (ping-pong)](#csharppingpong2cores)  
         • [Параллельное синхронизированное выполнение в 4 потока (mummy-daddy-baby-cat)](#csharppingpong4threads)  
@@ -117,11 +117,12 @@
     • [HangFire](#csharphangfire)  
     • [Stateless](#csharpstateless)  
 
-• F# 1    
-    • Преимущества F#
-    • Недостатки F#
-    • Простейший код
-    • Подмешивание кода F# к коду C#
+•+ F# 1    
+    •+ [Преимущества F#](#fsharppros)  
+    •+ [Недостатки F#](#fsharpcontras)  
+    •+ [Простейший код](#fsharpsimplycode)  
+    •+ [Смешивание кода F# и кода C#](#fsharpmixfithcsharp)  
+    •+ [F# coding conventions](#fsharpcodeconvent)  
 
 • Архитектурные принципы и паттерны 1  
     • [Какой код лучше?](#archwhatbest)  
@@ -190,7 +191,7 @@
 • [TypeScript 1](#nettypescript)  
 
 • [React 1](#netreact)  
-
+    • [Redux 1](#netredux)  
 • [Отладка в браузере 1](#netbrowserdebug)  
 
 • [ASP.NET Core MVC 1](#netaspnetcoremvc)  
@@ -1786,6 +1787,32 @@ table th:nth-of-type(8) {
 | Матрица инцидентности<br>(Incidence matrix) | V*E | V*E | V*E | V*E | V*E | E |
 | Список смежности<br>(Adjacency list) | V+E | 1 | 1 | V+E | E | V |
 | Список инцидентности<br>(Incidence list) | V+E | 1 | 1 | E | E | E |
+
+### F#
+### Преимущества F# <a name="fsharppros"></a>
+
+Функциональная парадигма
+Новые "фишки" появляются раньше, чем в C#.
+
+### Недостатки F# <a name="fsharpcontras"></a>
+
+Скорость.
+Относительно высокий порог входа.
+Низкая распространенность, отсутствие вакансий.
+
+### Простейший код <a name="fsharpsimplycode"></a>
+
+```fsharp
+printfn "Hello from F#"
+```
+
+### Смешивание кода F# и кода C# <a name="fsharpmixfithcsharp"></a>
+
+Нужно создать [отдельный F#-класс](https://stackoverflow.com/a/14280031/5176630) в рамках C#-решения.
+
+### F# coding conventions <a name="fsharpcodeconvent"></a>
+
+[F# coding conventions](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/conventions)
 
 ### SOLID <a name="arcchsolid"></a>  
 
