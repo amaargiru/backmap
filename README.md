@@ -1905,6 +1905,7 @@ squash
 ### C# <a name="bibliographycsharp"></a>
 
 [ECMA-334](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)  
+[C# Notes for Professionals](https://goalkicker.com/CSharpBook/)
 
 Документация на сайте Microsoft и опция «Загрузить pdf»  
 
