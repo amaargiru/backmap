@@ -1910,3 +1910,226 @@ squash
 [C# Notes for Professionals](https://goalkicker.com/CSharpBook/)
 
 Документация на сайте Microsoft и опция «Загрузить pdf»  
+
+Требования к C# программисту: C#, Core, ООП, алгоритмы, паттерны, профилирование, NUnit, SQL, PostgreSQL, Dapper, ASP.NET, сетевые протоколы, Azure (PostgreSQL, Functions, Queue).
+
+C#
+Основные конструкции
+Типы значений и ссылочные типы
+ООП
+Модификатор static
+Модификаторы доступа: public, private, sealed, virtual, abstract, readonly, partial
+this
+base
+as/is
+Интерфейсы
+Свойства
+Кортежи
+INumerable
+INumerator
+IEnumerable
+ICollection
+IList
+ICloneable
+IQueryable
+IDisposable
+ISerializable
+Делегаты
+Цепочки делегатов
+Action<>
+Func<>
+События
+Rx
+Анонимные методы
+Лямбда-выражения
+Деревья выражений
+Обобщения
+Индексаторы
+Перегрузка операций
+Явное преобразование
+Неявное преобразование
+Расширяющие методы
+Анонимные типы
+Lazy
+Указатели
+Linq to Objects
+Linq lazy/eager
+GC
+Рефлексия
+Позднее связывание
+Атрибуты
+Валидация
+Null-совместимые значимые типы
+Динамические типы
+Многопоточность
+TPL
+For, ForEach и Invoke класса Parallel
+PLINQ
+async/await
+Таймеры
+Асинхронные функции
+Синхронизация потоков
+Обработка исключений
+Операции со строками (String)
+Операции со строками (StringBuilder)
+SecureString
+Файловый ввод-вывод
+Сериализация объектов
+Эффективная работа с памятью (Span<T>, Memory<T>, ReadOnlySequence<T>)
+CIL
+Среда CLR
+Администрирование типов и приложений
+Совместно используемые сборки
+Сборки со строгим именем
+Домены приложений
+JIT и NGen
+
+SQL
+Microsoft SQL Server
+PostgreSQL
+T-SQL
+ADO.NET
+Entity Framework Core
+Dapper
+NHibernate
+CQS
+
+WPF Core
+Свойства зависимости
+Маршрутизируемые события
+Валидация данных
+Словари ресурсов
+Шаблоны
+Стили
+Привязка элементов
+Привязка к данным
+Анимация
+Триггеры
+Разработка UI компонентов
+Telerik UI for WPF
+LightningChart .NET
+
+ASP.NET Core
+Stateless
+HTTP
+HTML
+JavaScript
+TypeScript
+XML
+JSON
+REST/SOAP
+Аутентификация
+Маршрутизация
+Bootstrap
+Razor
+Blazor
+Telerik UI for ASP.NET Core
+Telerik Blazor UI
+DevExpress ASP.NET
+
+NUnit
+Простые тесты
+Заглушки
+Подставки
+Специфика тестирования ASP.NET MVC
+
+
+SOA
+WCF
+RabbitMQ
+
+Azure
+
+Коллекции
+Array
+Jagged array
+LinkedList односвязный
+LinkedList двусвязный
+Бинарное дерево
+Красно-чёрное дерево
+АВЛ-дерево
+Graph
+List
+Dictionary
+Hashmap
+Stack
+Queue
+SortedSet
+
+Алгоритмы
+О()
+Fizz buzz
+Пузырьковая сортировка
+Сортировка слиянием
+Быстрая сортировка
+Поиск в ширину
+Поиск в глубину
+Бинарный поиск
+Рекурсия
+Параллелизм
+Побитовая обработка
+Задача коммивояжера
+Жадные алгоритмы
+Динамическое программирование
+Архивирование
+Шифрование
+БПФ
+
+Архитектурные паттерны
+Чистая архитектура
+SOLID
+DRY
+Тестопригодная архитектура
+MVVM
+MVC
+MVP
+DI
+IoC
+
+Паттерны проектирования
+Стратегия
+Фабричный метод
+Абстрактная фабрика
+Одиночка
+Наблюдатель
+Декоратор
+Посредник
+Посетитель
+Строитель
+Команда
+Адаптер
+Фасад
+Шаблонный метод
+Итератор
+Компоновщик
+Состояние
+Заместитель
+Паттерны SOA
+
+Инструментарий
+Visual Studio
+Resharper
+dotTrace
+dotMemory
+dotCover
+ildasm
+Изолирующий каркас NSubstitute
+IoC-контейнер Autofac
+Coverity Scan
+PVS-Studio
+LinqPad
+SQLMetal
+Fody (PropertyChanged)
+Microsoft Blend
+BenchmarkDotnet
+
+Организация работы
+Git
+tig
+Github
+Gitlab
+Jira
+Agile
+Kanban
+Scrum
+
